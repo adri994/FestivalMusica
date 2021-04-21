@@ -1,0 +1,72 @@
+.lineup {
+    background-color: $pink;
+    padding: $separation 0;
+
+    h2,h3,p{
+        text-align: center;
+        color:$white;
+    }
+
+    .lineup__date{
+        text-transform: uppercase;
+        margin: $separation 0;
+    }
+}
+
+.stages{
+    @include tablet{
+        @include grid(2,$separation)
+    }
+
+    .stage__name{
+        color:$black;
+        font-size: 2rem;
+        font-weight:$light;
+
+        &::after{
+            content:"";
+            width: 15rem;
+            height:10rem;
+            display:block;
+            margin: 2rem auto 0 auto;
+            background-size: 15rem;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.stage{
+    padding: $separation /2 0
+}
+
+.edm .stage__name{
+    &::after{
+        background-image: url(/build/img/icono_edm.webp);
+    }
+}
+
+.rock .stage__name{
+    &::after{
+        background-image: url(/build/img/icono_rock.webp);
+    }
+}
+
+.stage__calendar{
+    padding: 0;
+    list-style-type: none;
+    li{
+        padding:$separation /2;
+        font-weight: $bold;
+    }
+
+    span{
+        font-weight: $regular;
+    }
+}
+
+.bg-green li:nth-child(odd){ //o puedes usar el 2n+1 el odd son todos lo impares
+    background-color: darken($green, 10); //tonalidad oscura y esta lighten tonalidad clara OJO solo sass
+}
+.bg-yellow li:nth-child(odd){ 
+    background-color: darken($yellow, 10); 
+}

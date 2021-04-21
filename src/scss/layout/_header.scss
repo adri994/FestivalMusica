@@ -1,0 +1,46 @@
+.header {
+    background-color: $green;
+    & .header-content{
+        padding: $separation /2 0;
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+    }
+
+    h1 {
+        color:$white;
+        margin-bottom: 1rem;
+        text-align: center;
+        @include tablet {
+            margin-bottom: 0;
+        }
+    }
+
+    &.fijo{
+        position: fixed;
+        width: 100%;
+        box-shadow: 0 .3rem .4rem #444
+    }
+
+}
+
+.navbar-primary{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 2rem;
+    justify-items: center;
+    a{
+        color:$white;
+        font-size: 2rem;
+
+        &:hover{
+            color:$yellow;
+        }
+    }
+}
+
+
+

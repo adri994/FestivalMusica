@@ -1,0 +1,10 @@
+1- instalar gulp como dev
+2- ejecutar el siguiente comando npm install --save-dev @babel/core @babel/register @babel/preset-env
+3- crear el archivo .babelrc y escribir lo siguiente comando
+{
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+4- instlar gulp-sass como dev y cuando usa la funcion de sass puede indicarle que lo minifique
+5- 

@@ -1,0 +1,24 @@
+.about-content{
+    padding:$separation 0;
+
+    @include tablet {
+        @include grid(2,$separation);
+    }
+}
+
+.about-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .about-text__title{
+        font-size:3rem;
+    }
+    .about-text__date{
+        color:$pink;
+        font-size:$bold;
+    }
+
+    .about-text__paragraph{
+        line-height: 2;
+    }
+}
